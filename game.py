@@ -24,18 +24,20 @@ class game():
         self.__step_count = 0
 
         flag = 1
-        out = 0
+        terminate = 0
         score = 0
-        return self.ss,flag,out,score
+        perception = self.ss
+        return perception,flag,terminate,score
     
     def __is_terminate(self):
         if(self.ss ==3):
-            out = 1
+            terminate = 1
+            score = 1/self.__step_count
         else:
-            out = 0
+            terminate = 0
+            score = 0
 
-        score = 1/self.__step_count
-        return out,score
+        return terminate,score
 
     
     def step(self,action):
@@ -52,7 +54,8 @@ class game():
             self.ss = self.state_dimension-1
         
         self.__step_count+=1
-        out,score = self.__is_terminate()
+        terminate,score = self.__is_terminate()
         
         flag = 1
-        return self.ss,flag,out,score
+        perception = self.ss
+        return perception,flag,terminate,score
