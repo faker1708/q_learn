@@ -35,7 +35,7 @@ class game():
         score = 0
         if(self.__step_count>=4):
             terminate = 1
-            if(self.ss ==4):
+            if(self.ss ==3):
                 score = 1
         
 

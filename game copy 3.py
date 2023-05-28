@@ -14,7 +14,7 @@ class game():
 
     def __main(self):
 
-        self.state_dimension = 8
+        self.state_dimension = 2
         self.action_dimension = 3   # idle 左右
 
         return
@@ -33,9 +33,9 @@ class game():
         
         terminate = 0
         score = 0
-        if(self.__step_count>=4):
+        if(self.__step_count>=1):
             terminate = 1
-            if(self.ss ==4):
+            if(self.ss ==0):
                 score = 1
         
 

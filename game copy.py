@@ -30,14 +30,12 @@ class game():
         return perception,flag,terminate,score
     
     def __is_terminate(self):
-        
-        terminate = 0
-        score = 0
-        if(self.__step_count>=4):
+        if(self.ss ==3):
             terminate = 1
-            if(self.ss ==4):
-                score = 1
-        
+            score = 1/self.__step_count
+        else:
+            terminate = 0
+            score = 0
 
         return terminate,score
 

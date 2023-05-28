@@ -48,24 +48,11 @@ class agent():
         self.__exp_list = exp_list
         self.__update()
 
-
         ####
         # for i ,sql in enumerate(self.__q_list):
         #     # print(sql)
-        #     print(i,end = ' ')
-        #     for _,q in enumerate(sql):
-        #         if(q<0.1):
-        #             print('_',end = ' ')
-        #         else:
-        #             print(q,end= ' ')
-        #     print('')
+        #     print(i,sql.index(max(sql)))
         # print('\n____________________________________________')
-
-        
-        for i ,sql in enumerate(self.__q_list):
-            # print(sql)
-            print(i,sql.index(max(sql)))
-        print('\n____________________________________________')
 
         return
     

@@ -23,7 +23,7 @@ class main_class():
             exp_list = list()
             while(1):
                 action = self.agent.take_action(perception,epsilon)
-                next_perception,flag,terminate,score = self.game.step(action)
+                perception,flag,terminate,score = self.game.step(action)
 
                 # print('action',action)
 
@@ -31,8 +31,6 @@ class main_class():
                 exp_list.append(exp)
                 if(terminate):
                     break
-                else:
-                    perception = next_perception
             
             # print('score',score)
             
